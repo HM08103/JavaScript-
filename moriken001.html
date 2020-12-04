@@ -8,13 +8,13 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-    <!-- 問2 const arry = ['aa','bb','cc','dd','ee','ff','gg'];の
-        dd,ee,ffを新たな配列として返してください-->
+    <!-- 問1 const a = { a: 'a' }とconst b = { b: 'b' } をマージした
+        c を出力してください e.g{ a:'a', b:'b' } -->
     <script>
-        const arry = ['aa','bb','cc','dd','ee','ff','gg'];
-        const newArry = [];
-        newArry.push(arry[3], arry[4], arry[5]);
-        console.log(newArry);
+        const a = { a: 'a' };
+        const b = { b: 'b' };
+        const c = Object.assign(a, b);
+        console.log(c);
     </script>
 </body>
 </html>
