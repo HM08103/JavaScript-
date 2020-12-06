@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <!-- 問4 ['a', 'b']の各要素にindex値を足した文字列を出力してくださいe.g 'a0'と'b1'-->
+    <script>
+        let array = ['a','b'];
+        for (let i = 0; i < array.length; i++) {
+            array[i] += array.indexOf(array[i]);
+        }
+        console.log(array);
+
+        // 参考
+        // const arry = ['a','b'];
+        // arry.forEach(function(ele,i){
+        // console.log(ele + i)
+        // })
+    </script>
+</body>
+</html>
