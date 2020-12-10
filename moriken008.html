@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <!-- 問8
+        下記
+            const obj = {
+            key: 'aa',
+            key2: 'bb'
+            }
+        の中のkeyとvalueを自身のプロパティのみ全て出力しなさい
+    }-->
+
+    <script>
+        const obj = {
+            key: 'aa',
+            key2: 'bb'
+        }
+
+        for(key in obj){
+            console.log(key); // ()内にobj[key]を加えるとvalueも取り出せる
+        }
+
+        // 参考
+        // for (key in obj){
+        //     if(obj.hasOwnProperty(key)){
+        //         console.log(key, obj[key])
+        //     }
+        // }
+    </script>
+</body>
+</html>
