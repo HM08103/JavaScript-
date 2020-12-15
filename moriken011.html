@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <!-- 問11
+        let arry =[
+            {id:1,name:'morita'},
+            {id:2,name:'kenji'},
+            {id:4,name:'uro'},
+            {id:3,name:'ken'}
+        ];
+        をid番号が若い順にソートしたオブジェクトを含む配列を出力してください
+    }-->
+
+    <script>
+        let arry =[
+            {id:1,name:'morita'},
+            {id:2,name:'kenji'},
+            {id:4,name:'uro'},
+            {id:3,name:'ken'}
+        ];
+
+        arry.sort(function(a, b){
+            if(a.id < b.id){
+                return -1;
+            } else {
+                return 1;
+            }
+        });
+
+        console.log(arry);
+
+        // let arry =[
+        // {id:1,name:'morita'},
+        // {id:2,name:'kenji'},
+        // {id:4,name:'uro'},
+        // {id:3,name:'ken'}
+        // ];
+        // arry.sort(function(a,b){
+        // return a.id > b.id
+        // })
+
+        // //先に位置させたい時はaが'正'をになるように返します
+
+        // //other
+        // arry.sort(function(a,b){
+        // if(a.id > b.id) return 1;
+        // if(a.id < b.id) return -1;
+        // });
+    </script>
+</body>
+</html>

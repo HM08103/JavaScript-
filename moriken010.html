@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <!-- 問10
+        こちら
+        x = 43
+        let y = 3
+        の2つの変数。deleteできるのはどちらですか？
+    }-->
+
+    <script>
+        // 参考
+            // // deleteは暗黙に定義された場合は変数は削除できるが、
+            // var(let) や function文中の変数はnon-configurableであり削除できない
+
+            // //globaleオブジェクト
+            // x = 43;
+            // delete x 
+            // //true //暗黙に定義されたglobale変数なので
+
+            // //var宣言
+            // delete y
+            // false //削除できない
+
+            // //関数宣言文の中でのdelete
+            // function f(){
+            // var z = 44;
+            // delete z;
+            // console.log(z)
+            // }
+            // f()
+            // //44 //削除されていない
+
+            // 【配列の要素の削除】
+            // 1
+            // let color = ['red', 'blue', 'green'];
+            // //要素として存在する状態にするが値は未定義
+            // color[1]= undefined;
+            // color
+            // //["red", undefined, "green"]
+            // if(1 in color){console.log('実行されてます')}
+            // //実行されてます
+
+            // 2
+            // let color = ['red', 'blue', 'green'];
+            // delete color[1]
+            // //true
+            // color.length//削除しても配列の長さには影響しない
+
+            // //3
+            // //配列の一部ではなくなります
+            // if(1 in color){console.log('実行されてます')}
+            // //出力されない(1との違いに注意してください)
+
+            // //
+            // function Foo(){}
+            // Foo.prototype.bar = 42;
+            // let foo = new Foo();
+            // delete foo.bar;
+            // //true
+
+            // //trueを返すがプロトタイプから継承してオブジェクトに存在するプロパティは削除できない
+            // foo.bar
+            // //42
+
+            // //プロトタイプ上でプロパティを削除
+            // delete foo.prototype.bar;
+            // foo.bar 
+            //undefined
+    </script>
+</body>
+</html>
